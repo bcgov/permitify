@@ -12,7 +12,7 @@
 # Make some modifications to the python-s2i image to support
 # dynamic creation of issuer services based on the container's
 # deployment configuration.
-FROM andrewwhitehead/von-image:py36-indy1.3.1-dev-441-ew-s2i
+FROM andrewwhitehead/von-image:py36-1.0rc1-s2i
 
 USER root
 
