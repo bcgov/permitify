@@ -2,15 +2,13 @@
   "name": "incorporation.bc_registries",
   "version": "1.0.0",
   "nonce": "1986273812765872",
-  "requested_attrs": {
+  "requested_attributes": {
     "worksafe_letter_exists": {
       "name": "legal_entity_id",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "restaurant_clearance_letter.worksafe_bc",
-            "version": "1.0.31"
-          }
+          "schema_name": "restaurant_clearance_letter.worksafe_bc",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -18,10 +16,8 @@
       "name": "legal_entity_id",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "pst_number.ministry_of_finance",
-            "version": "1.0.31"
-          }
+          "schema_name": "pst_number.ministry_of_finance",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -29,10 +25,8 @@
       "name": "legal_entity_id",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "operating_permit.fraser_valley_health_authority",
-            "version": "1.0.31"
-          }
+          "schema_name": "operating_permit.fraser_valley_health_authority",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -40,10 +34,8 @@
       "name": "address_line_1",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -51,10 +43,8 @@
       "name": "address_line_2",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -62,10 +52,8 @@
       "name": "addressee",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -73,10 +61,8 @@
       "name": "city",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -84,10 +70,8 @@
       "name": "corp_num",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -95,10 +79,8 @@
       "name": "country",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -106,10 +88,8 @@
       "name": "effective_date",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -117,10 +97,8 @@
       "name": "end_date",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -128,10 +106,8 @@
       "name": "legal_entity_id",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -139,10 +115,8 @@
       "name": "legal_name",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -150,10 +124,8 @@
       "name": "org_type",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -161,10 +133,8 @@
       "name": "postal_code",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     },
@@ -172,10 +142,8 @@
       "name": "province",
       "restrictions": [
         {
-          "schema_key": {
-            "name": "incorporation.bc_registries",
-            "version": "1.0.31"
-          }
+          "schema_name": "incorporation.bc_registries",
+          "schema_version": "1.0.31"
         }
       ]
     }
