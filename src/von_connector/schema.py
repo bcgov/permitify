@@ -96,6 +96,7 @@ class SchemaManager():
                 # claim_def_json = await issuer.get_claim_def(
                 #     schema['seqNo'], issuer.did)
                 # if not json.loads(claim_def_json):
+
                 claim_def_json = await issuer.send_cred_def(schema_json)
 
                 claim_def = json.loads(claim_def_json)
