@@ -36,17 +36,17 @@ issuers:
             input: corp_num
             from: claim
           type:
-            input: incorporation
+            input: registration
             from: value
 
 proof_requests:
   registration:
-    version: '1.0.3'
+    version: '1.0.4'
     schemas:
       - key:
           did: 6qnvgJtqwK44D8LFYnV5Yf
-          name: incorporation.permitify
-          version: '1.0.3'
+          name: registration.permitify
+          version: '1.0.4'
         attributes:
           - corp_num
 
@@ -61,21 +61,21 @@ verifiers:
 
 proof_requests:
   registration:
-    version: '1.0.3'
+    version: '1.0.4'
     schemas:
       - key:
           did: 6qnvgJtqwK44D8LFYnV5Yf
-          name: incorporation.permitify
-          version: '1.0.3'
+          name: registration.permitify
+          version: '1.0.4'
         attributes:
           - corp_num
           - legal_name
   clearance-letter:
-    version: '1.0.3'
+    version: '1.0.4'
     schemas:
       - key:
           did: MAcounf9HxhgnqqhzReTLC
           name: worksafe.permitify
-          version: '1.0.3'
+          version: '1.0.4'
         attributes:
           - corp_num

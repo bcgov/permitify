@@ -2,9 +2,9 @@ forms:
   bcreg-incorp:
     path: /bcreg/incorporation
     type: issue-credential
-    schema_name: incorporation.permitify
+    schema_name: registration.permitify
     page_title: BC Corporate Registry
-    title: Incorporation
+    title: Registration
     template: bcgov.index.html
     description: >
       BC Registries and Online Services administers and supports the legal framework

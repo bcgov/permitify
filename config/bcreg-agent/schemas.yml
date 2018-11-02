@@ -1,5 +1,5 @@
-- name: incorporation.permitify
-  version: '1.0.3'
+- name: registration.permitify
+  version: '1.0.4'
   attributes:
     - corp_num
     - registration_date
@@ -16,16 +16,14 @@
     - postal_code
     - province
 
-# - name: doing_business_as.permitify
-#   version: '1.0.3'
-#   attributes:
-#     - corp_num
-#     - dba_corp_num
-#     - doing_business_as_name
-#     - address_line_1
-#     - address_line_2
-#     - addressee
-#     - city
-#     - country
-#     - postal_code
-#     - province
+- name: relationship.permitify
+  version: '1.0.4'
+  attributes:
+    - corp_num
+    - dba_corp_num
+    - relationship
+    - relationship_description
+    - relationship_status
+    - relationship_status_effective
+    - effective_date
+    - reason_description

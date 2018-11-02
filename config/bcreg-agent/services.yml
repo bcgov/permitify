@@ -30,15 +30,15 @@ issuers:
         key_derivation_method: ARGON2I_MOD
 
     credential_types:
-      - description: Incorporation
-        schema: incorporation.permitify
+      - description: Registration
+        schema: registration.permitify
         issuer_url: $APPLICATION_URL_INCORP
         topic:
           source_id:
             input: corp_num
             from: claim
           type:
-            input: incorporation
+            input: registration
             from: value
         mapping:
           - model: name
@@ -128,31 +128,72 @@ issuers:
                 from: claim
 
 
-      # - description: Doing Business As
-      #   schema: doing_business_as.permitify
-      #   issuer_url: $APPLICATION_URL_DBA
-      #   topic:
-      #     source_id:
-      #       input: corp_num
-      #       from: claim
-      #     type:
-      #       input: incorporation
-      #       from: value
-      #     related_source_id:
-      #       input: dba_corp_num
-      #       from: claim
-      #     related_type:
-      #       input: doing_business_as
-      #       from: value
-      #   mapping:
-      #     - model: name
-      #       fields:
-      #         text:
-      #           input: doing_business_as_name
-      #           from: claim
-      #         type:
-      #           input: dba_name
-      #           from: value
+      - description: Relationship
+        schema: relationship.permitify
+        issuer_url: $APPLICATION_URL_DBA
+        credential:
+          effective_date:
+            input: effective_date
+            from: claim
+        topic:
+          related_source_id:
+            input: dba_corp_num
+            from: claim
+          related_type:
+            input: registration
+            from: value
+          source_id:
+            input: corp_num
+            from: claim
+          type:
+            input: registration
+            from: value
+        cardinality_fields:
+          - dba_corp_num
+        mapping:
+          - model: category
+            fields:
+              type:
+                input: relationship
+                from: value
+              value:
+                input: relationship
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: relationship_description
+                from: value
+              value:
+                input: relationship_description
+                from: claim
+          - model: category
+            fields:
+              type:
+                input: relationship_status
+                from: value
+              value:
+                input: relationship_status
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: relationship_status_effective
+                from: value
+              format:
+                input: datetime
+                from: value
+              value:
+                input: relationship_status_effective
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: reason_description
+                from: value
+              value:
+                input: reason_description
+                from: claim
 
 # verifiers:
 #   bctob:
@@ -166,11 +207,11 @@ issuers:
 
 # proof_requests:
 #   registration:
-#     version: '1.0.3'
+#     version: '1.0.4'
 #     schemas:
 #       - key:
-#           name: incorporation.permitify
-#           version: '1.0.3'
+#           name: registration.permitify
+#           version: '1.0.4'
 #         attributes:
 #           - corp_num
 #           - address_line_1
