@@ -129,6 +129,7 @@ reset() {
     exit 1
   fi
 
+  _podsLoop=${_pods} # required as the original _pods array gets somehow modified when performing deleteWallets
   _wallets=()
   for _pod in ${_pods}; do
     _walletName=$(getWalletName ${_pod})
@@ -140,14 +141,17 @@ reset() {
   printAndWait "Wait for the all the pods to completely scale down before continuing."
 
   i=0
-  for _pod in ${_pods}; do
+  for _pod in ${_podsLoop}; do
     deleteEnterpriseWallet ${_pod} ${_wallets[$i]}
     exitOnError
-    scaleUp ${_pod}
     let "i++"
   done
 
-  printAndWait "The wallets for the specified pods were reset, they will be re-created when the pods start up again."
+  printAndWait "The wallets for the specified pods were reset, they will be re-created when the pods start up again. Hit return to scale the pods up and finish."
+
+  for _pod in ${_podsLoop}; do
+    scaleUp ${_pod}
+  done
 }
 
 deleteWallets() {
@@ -179,8 +183,8 @@ deleteEnterpriseWallet() {
   fi
 
   if [ ! -z "${WALLET_DB_INSTANCE_NAME}" ]; then
-    _sql="DROP DATABASE ${_walletName};"
-    _pSqlCmd="psql -U\${POSTGRESQL_USER} -d \${POSTGRESQL_DATABASE} -ac \"${_sql}\""
+    _sql="DROP DATABASE ${_walletName}"
+    _pSqlCmd="psql -U postgres -ac \"${_sql}\""
 
     runInContainer \
       ${_walletDbPodName} \
