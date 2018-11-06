@@ -49,14 +49,6 @@ issuers:
               type:
                 input: legal_name
                 from: value
-          - model: category
-            fields:
-              type:
-                input: topic_type
-                from: value
-              value:
-                input: CO
-                from: value
           - model: address
             fields:
               addressee:
