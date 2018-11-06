@@ -1,0 +1,22 @@
+[
+    {
+        "corp_num": "FM0126534",
+        "dba_corp_num": "FM0172044",
+        "effective_date": "2014-04-09",
+        "reason_description": "Filing:FRREG",
+        "relationship": "579488 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Huerta Ratskeller",
+        "relationship_status_effective": "FM0172044"
+    },
+    {
+        "corp_num": "FM0126534",
+        "dba_corp_num": "FM0321707",
+        "effective_date": "2007-01-08",
+        "reason_description": "Filing:FRREG",
+        "relationship": "COLLAZO & D KPW GOURMET INC.",
+        "relationship_description": "BC",
+        "relationship_status": "Rodriguez Dining Room",
+        "relationship_status_effective": "FM0321707"
+    }
+]

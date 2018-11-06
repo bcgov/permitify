@@ -1,0 +1,22 @@
+[
+    {
+        "corp_num": "FM0996863",
+        "dba_corp_num": "FM0330476",
+        "effective_date": "2010-02-16",
+        "reason_description": "Filing:FRREG",
+        "relationship": "Owns",
+        "relationship_description": "Does Business As",
+        "relationship_status": "ACT",
+        "relationship_status_effective": "2010-02-16"
+    },
+    {
+        "corp_num": "FM0996863",
+        "dba_corp_num": "FM0323796",
+        "effective_date": "2018-07-05",
+        "reason_description": "Filing:FRREG",
+        "relationship": "THERRIEN CHENG CATERING INC.",
+        "relationship_description": "BC",
+        "relationship_status": "Lisi Diner",
+        "relationship_status_effective": "FM0323796"
+    }
+]

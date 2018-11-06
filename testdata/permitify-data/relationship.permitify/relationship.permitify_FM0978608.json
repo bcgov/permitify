@@ -1,0 +1,42 @@
+[
+    {
+        "corp_num": "FM0978608",
+        "dba_corp_num": "FM0689515",
+        "effective_date": "2009-01-03",
+        "reason_description": "Filing:FRREG",
+        "relationship": "988789 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Porter Eatry",
+        "relationship_status_effective": "FM0689515"
+    },
+    {
+        "corp_num": "FM0978608",
+        "dba_corp_num": "FM0838889",
+        "effective_date": "2015-05-31",
+        "reason_description": "Filing:FRREG",
+        "relationship": "PHILLIPPI ENTERPRISES INC.",
+        "relationship_description": "BC",
+        "relationship_status": "Peirce Cafe",
+        "relationship_status_effective": "FM0838889"
+    },
+    {
+        "corp_num": "FM0978608",
+        "dba_corp_num": "FM0862495",
+        "effective_date": "2014-06-30",
+        "reason_description": "Filing:FRREG",
+        "relationship": "TORRES HOLDINGS LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Bankston Foods",
+        "relationship_status_effective": "FM0862495"
+    },
+    {
+        "corp_num": "FM0978608",
+        "dba_corp_num": "FM0392976",
+        "effective_date": "2018-05-13",
+        "reason_description": "Filing:FRREG",
+        "relationship": "768189 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Pinzon Shack",
+        "relationship_status_effective": "FM0392976"
+    }
+]

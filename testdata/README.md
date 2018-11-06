@@ -1,98 +1,37 @@
-# TheOrgBook - Generating/Loading Test Data
+# Permitify - Generating/Loading Test Data into TheOrgBook
 
 ## Overview
 
-This folder contains reference and test data for the TheOrgBook (TOB) application and a mechanism for managing and generating the reference and test data files. The load script uses an instance of Permitify to create and send claims as multiple systems are required to generate verifiable claims.
+This folder contains reference and test data for Permitify, and a mechanism for managing and generating the reference and test data files that can be imported into the TheOrgBook.
 
-TOB API V2 data has been added to this folder, but only the generate script has been updated. As work continues on migrating to V2, the scripts and this README will be updated.
+## Dependencies
 
-## Handling V2 Data
+The data generation and import scripts require Python 3 to run.
 
-Only the Registries data has been created and is being generated for the V2 interface. To generate the data:
+It is also recommended that [PipEnv](https://pipenv.readthedocs.io/en/latest/) is used, as it simplifies the dependency management for the scripts.
+Please refer to PipEnv's guide to install it.
 
+Once PipEnv is installed, run `pipenv sync` from within the `testdata` folder to create the virtual environment and, once the dependencies have been installed, `pipenv shell` to start it.
+
+Please note that under Linux the python executable is called `python3`.
+
+## Generating the Test Data
+
+Test data can be generated using an Excel spreadsheet and parsing it using the provided `xls2json.py` script.
+
+1. Create a new excel spreadsheet containing as many sheets as the different types of credentials that require generating. Make sure the sheet is named exactly as the scema corresponding to the credential that will be inserted, followed by `.csv` (e.g.: registration.permitify.csv for the credential using the registration.permitify schema).
+    * It is recommended that a sub-folder is used to store the Excel spreadsheet, as the resulting test data will be stored at the same level as the source spreadsheet.
+2. Populate the spreadsheet, creating a column for each item in the schema. The column header should be named **exactly** as the schema element it corresponds to.
+3. Once the spreadsheet contains the desired data, create the ready-to-import JSON files using the `xls2json.py` script. Open a shell inside the folder containing the Excel spreadsheet, and run the following command:
 ```
-./genV2creds.sh TOBV2DataFakeRestaurentsBusinessLicences.xlsx
+python ../xls2json.py MY_SPREADSHEET.xls
 ```
-
-The generated data is currently loaded manually. 
-
-***TO DO:** Update this with steps for loading.*
-
-## Handing V1 TOB Data
-
-### Managing/Creating the Data
-
-The data is maintained in the Claims directory as a series of "recipes". Each JSON file can be used to automate data entry for an entire TOB recipe workflow.
-
-TODO: describe method to generate data
+4. The command will create a sub-folder containing JSON data for each one of the sheets containing a data definition.
 
 ### Loading the Test Data
 
-Once the data is generated, scripts are used to load the data via the Permitify services.
-
-The `load-all.sh` script takes just the server as an argument (same format as `load.sh` to be loaded and loads in relational appropriate order all of the tables to initialize the application.  The load-all script removes the "cookie" file if it exists so that on only the first call to the load script, the (currently commented out) authentication call will be made to the server.
-
-### The Process
-
-
-These instructions assume you are using the OpenShift management scripts found here; [openshift-project-tools](https://github.com/BCDevOps/openshift-project-tools).  Refer to the [OpenShift Scripts](https://github.com/BCDevOps/openshift-project-tools/blob/master/bin/README.md) documentation for details.
-
-It is assumed you have an instance of Permitify running to run this script, and you have working copies of both the Permitify and TheOrgBook source code.
-
-1. Open 2 Git Bash command prompt windows; one to your `.../permitify/openshift` working directory and the other to your `.../TheOrgBook/openshift` working directory.
-2. From the `.../TheOrgBook/openshift` command prompt, run the manage command to reset the database in TheOrgBook environment.
-    - For example; 
-        - `./manage -P -e dev resetDatabase`
-    - For full usage information run;
-        - `./manage -h`
-3. From the `.../permitify/openshift` command prompt, run the manage commands to recycle all of the Permitify service pods.  This is needed because issuers must register themselves with TheOrgBook before they can issue claims.
-    - For example; 
-        - `./manage -e dev recycle`
-    - For full usage information run;
-        - `./manage -h`
-4. Wait for all of the Permitify services to full start before continuing.
-5. Use the `load-all.sh` script to populate the database through the Permitify services.
-
-### Creating/Loading Test Data
-
-The load-all.sh can be used to create test data, using the following optional parameters:
-
+Once the data is generated, the `loadClaims.py` script can be used to import it into the instance of TheOrgBook supporting Permitify. From the `testdata` folder, run the following command:
 ```
-$./load-all.sh -h
-Data for TheOrgBook is now loading via the loading of claims. Details to come...
-usage: loadClaims.py [-h] [--random] [--env env] [--inputdir inputdir]
-                     [--threads threads] [--loops loops]
-
-A TheOrgBook Claim loader. Supports randomization for test data and threading
-for fast loading
-
-optional arguments:
-  -h, --help           show this help message and exit
-  --random             If data is to be randomized before loading (useful for
-                       test data)
-  --env env            Permitify and TheOrgBook services are on local/dev/test
-                       host
-  --inputdir inputdir  The directory containing JSON claims to be loaded
-  --threads threads    The number of threads to run for concurrent loading
-  --loops loops        The number of times to loop through the list
+AGENT_URL=<AGENT_URL> python loadClaims.py <DATA_FOLDER>
 ```
-
-The loader will load data from the data files as described above, however it can optionally "randomize" the data to support loading multiple copies, using the "--random" flag:
-
-```
-$./load-all.sh --random
-```
-
-You can spin up multiple threads, and loop through the input data multiple times, as follows:
-
-```
-$./load-all.sh --threads 4 --loops 10
-```
-
-When you specify either of these flags, then "--random" is enabled automatically.
-
-There is also the option to load data directly into a wallet - this can be used for adding wallet data "through the back door" for performance testing.  This data won't have all the fancy anoncreds and can't be processed by the indy-sdk:
-
-```
-$./load-all.sh --env wallet
-```
+Where *AGENT_URL* is the endpoint for the agent that will issue the credential (e.g.: https://devex-von-permitify-dev.pathfinder.gov.bc.ca/bcreg for the BC Registries agent), and <DATA_FOLDER> is the folder containing the test data to be imported (e.g.: ***permitify-data***).

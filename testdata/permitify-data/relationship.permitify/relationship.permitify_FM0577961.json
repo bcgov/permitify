@@ -1,0 +1,32 @@
+[
+    {
+        "corp_num": "FM0577961",
+        "dba_corp_num": "FM0630400",
+        "effective_date": "2008-09-17",
+        "reason_description": "Filing:FRREG",
+        "relationship": "352178 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Joplin Charcuterie",
+        "relationship_status_effective": "FM0630400"
+    },
+    {
+        "corp_num": "FM0577961",
+        "dba_corp_num": "FM0905044",
+        "effective_date": "2011-05-24",
+        "reason_description": "Filing:FRREG",
+        "relationship": "SEVIN ALI BABA LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Knight Brasserie",
+        "relationship_status_effective": "FM0905044"
+    },
+    {
+        "corp_num": "FM0577961",
+        "dba_corp_num": "FM0365433",
+        "effective_date": "2016-03-04",
+        "reason_description": "Filing:FRREG",
+        "relationship": "621274 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Bumpers Coffee House",
+        "relationship_status_effective": "FM0365433"
+    }
+]

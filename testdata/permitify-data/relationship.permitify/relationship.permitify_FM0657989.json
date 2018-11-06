@@ -1,0 +1,22 @@
+[
+    {
+        "corp_num": "FM0657989",
+        "dba_corp_num": "FM0441712",
+        "effective_date": "2008-10-14",
+        "reason_description": "Filing:FRREG",
+        "relationship": "SMITH ENTERPRISES LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Carter Greasy Spoon",
+        "relationship_status_effective": "FM0441712"
+    },
+    {
+        "corp_num": "FM0657989",
+        "dba_corp_num": "FM0480129",
+        "effective_date": "2005-02-12",
+        "reason_description": "Filing:FRREG",
+        "relationship": "RUFF KITCHEN LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Wright Diner",
+        "relationship_status_effective": "FM0480129"
+    }
+]

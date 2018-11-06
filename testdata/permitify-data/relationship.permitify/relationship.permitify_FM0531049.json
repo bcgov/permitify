@@ -1,0 +1,22 @@
+[
+    {
+        "corp_num": "FM0531049",
+        "dba_corp_num": "FM0590574",
+        "effective_date": "2018-05-30",
+        "reason_description": "Filing:FRREG",
+        "relationship": "LONG HOLDINGS LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Colbert Canteen",
+        "relationship_status_effective": "FM0590574"
+    },
+    {
+        "corp_num": "FM0531049",
+        "dba_corp_num": "FM0918448",
+        "effective_date": "2005-09-03",
+        "reason_description": "Filing:FRREG",
+        "relationship": "MORTON WING RESTAURANT LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Cleary Brasserie",
+        "relationship_status_effective": "FM0918448"
+    }
+]

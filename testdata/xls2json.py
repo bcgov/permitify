@@ -196,7 +196,7 @@ else:
 
 for csvFile in inputFiles:
     print('Processing CSV \'%s\'' % csvFile)
-    entity_name = csvFile.split(".")[0]
+    entity_name = csvFile.split(".csv")[0]
     data_dicts = process_file(csvFile)
     datasets = make_datasets(data_dicts)
     for dataset_name, dataset_data in datasets.items():

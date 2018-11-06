@@ -1,0 +1,32 @@
+[
+    {
+        "corp_num": "FM0626073",
+        "dba_corp_num": "FM0218652",
+        "effective_date": "2011-08-26",
+        "reason_description": "Filing:FRREG",
+        "relationship": "FERRELL ENTERPRISES LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Fulford Pub",
+        "relationship_status_effective": "FM0218652"
+    },
+    {
+        "corp_num": "FM0626073",
+        "dba_corp_num": "FM0289291",
+        "effective_date": "2008-11-25",
+        "reason_description": "Filing:FRREG",
+        "relationship": "PAUL GRANDVIEW RESTAURANT LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Locke Shack",
+        "relationship_status_effective": "FM0289291"
+    },
+    {
+        "corp_num": "FM0626073",
+        "dba_corp_num": "FM0299131",
+        "effective_date": "2004-11-21",
+        "reason_description": "Filing:FRREG",
+        "relationship": "MARCUS GOURMET INC.",
+        "relationship_description": "BC",
+        "relationship_status": "Martin Sandwich Shop",
+        "relationship_status_effective": "FM0299131"
+    }
+]

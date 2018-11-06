@@ -1,0 +1,22 @@
+[
+    {
+        "corp_num": "FM0403540",
+        "dba_corp_num": "FM0762193",
+        "effective_date": "2007-04-25",
+        "reason_description": "Filing:FRREG",
+        "relationship": "704037 B.C. LTD.",
+        "relationship_description": "BC",
+        "relationship_status": "Gonzalez Brasserie",
+        "relationship_status_effective": "FM0762193"
+    },
+    {
+        "corp_num": "FM0403540",
+        "dba_corp_num": "FM0297027",
+        "effective_date": "2012-08-23",
+        "reason_description": "Filing:FRREG",
+        "relationship": "WHITESIDE SYSTEMS INC.",
+        "relationship_description": "BC",
+        "relationship_status": "Elson Drive-In",
+        "relationship_status_effective": "FM0297027"
+    }
+]
