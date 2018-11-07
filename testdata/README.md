@@ -4,12 +4,11 @@
 
 This folder contains reference and test data for Permitify, and a mechanism for managing and generating the reference and test data files that can be imported into the TheOrgBook.
 
-## Dependencies
+## Requirements
 
 The data generation and import scripts require Python 3 to run.
 
-It is also recommended that [PipEnv](https://pipenv.readthedocs.io/en/latest/) is used, as it simplifies the dependency management for the scripts.
-Please refer to PipEnv's guide to install it.
+[PipEnv](https://pipenv.readthedocs.io/en/latest/) is used to simplify dependency management for the scripts. Please refer to PipEnv's guide to install it.
 
 Once PipEnv is installed, run `pipenv sync` from within the `testdata` folder to create the virtual environment and, once the dependencies have been installed, `pipenv shell` to start it.
 
