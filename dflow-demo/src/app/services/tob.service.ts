@@ -117,7 +117,8 @@ export class TobService {
    */
   private isCredentialAvailable(id: string, creds: any) {
     const result = creds.filter((cred) => {
-      return id.indexOf(cred.credential_type.issuer.did) > -1;
+      return id.indexOf(cred.credential_type.issuer.did) > -1
+        && id.indexOf(cred.credential_type.schema.name) > -1;
     });
     return result.length > 0;
   }
