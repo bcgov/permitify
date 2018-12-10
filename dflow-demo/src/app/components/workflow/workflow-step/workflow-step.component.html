@@ -40,7 +40,7 @@
                       <li class="depends-item">
                         <span class="badge-pill" [ngClass]="{'badge-success': dep.isAvailable, 'badge-danger': !dep.isAvailable}">
                           <span class="fa mr-1" [ngClass]="{'fa-check-circle': dep.isAvailable, 'fa-times': !dep.isAvailable}"></span>
-                          <span>{{dep.schema}}</span>
+                          <span>{{dep.name}} ({{dep.schema}})</span>
                         </span>
                       </li>
                     </ul>
