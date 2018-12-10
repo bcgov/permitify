@@ -7,6 +7,7 @@
   }">
     <div class="card-header">
       <h5 class="my-0">{{ step.issuer.name }}</h5>
+      <h6 class="my-0 font-italic">{{ step.name }}</h6>
     </div>
     <div class="card-body">
         <div id="cert-body" class="claim-body">
@@ -38,7 +39,8 @@
                     <ul class="depends-items" *ngFor="let dep of step.dependencies">
                       <li class="depends-item">
                         <span class="badge-pill" [ngClass]="{'badge-success': dep.isAvailable, 'badge-danger': !dep.isAvailable}">
-                          <span class="fa" [ngClass]="{'fa-check-circle': dep.isAvailable, 'fa-times': !dep.isAvailable}"></span> {{ dep.name }}
+                          <span class="fa mr-1" [ngClass]="{'fa-check-circle': dep.isAvailable, 'fa-times': !dep.isAvailable}"></span>
+                          <span>{{dep.schema}}</span>
                         </span>
                       </li>
                     </ul>

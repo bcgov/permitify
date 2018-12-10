@@ -105,7 +105,8 @@ export class TobService {
         return dep.source.indexOf(issuer.did) > -1
       });
       const isAvailable = this.isCredentialAvailable(dep.source, creds);
-      return new StepDependency(depIssuer.name, isAvailable);
+      const depSchema = dep.source.split(':')[0]; // ghrab the schema name
+      return new StepDependency(depIssuer.name, depSchema, isAvailable);
     });
   }
 

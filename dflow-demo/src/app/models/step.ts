@@ -45,10 +45,12 @@ export class Step {
 
 export class StepDependency {
   name: string;
+  schema: string;
   isAvailable: boolean;
 
-  constructor (name: string, isAvailable = false) {
+  constructor (name: string, schema: string, isAvailable = false) {
     this.name = name;
+    this.schema = schema;
     this.isAvailable = isAvailable;
   }
 }
